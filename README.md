@@ -17,6 +17,9 @@
 ```bash
 # Receive log events from port 18080
 fluentd -c hello-world.conf
+
+# Generating an event
+curl -H "Content-type: application/json" -d '{"Hello": "World"}' 'localhost:18080'
 ```
 
 ---
