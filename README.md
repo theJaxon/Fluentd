@@ -22,4 +22,9 @@ fluentd -c hello-world.conf
 curl -H "Content-type: application/json" -d '{"Hello": "World"}' 'localhost:18080'
 ```
 
+### Validating config files
+```bash
+fluentd -c <conf> --dry-run
+```
+
 ---
