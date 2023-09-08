@@ -13,6 +13,14 @@
 
 ---
 
+### sending a log event to fluentd service
+```bash
+curl -H "Content-type: application/json"  -d '{"check_this_out":"This is a test message"}' http://localhost:8888/debug.test
+
+# Check the logs to validate
+cat /var/log/fluent/fluentd.log
+```
+
 ### hello-world config usage
 ```bash
 # Receive log events from port 18080
